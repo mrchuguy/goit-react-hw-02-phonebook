@@ -5,7 +5,7 @@ export const Form = styled.form`
   border-radius: 10px;
   padding: 30px 10px 10px;
   display: inline-block;
-  margin-top: 15px;
+  margin: 15px 0;
 `;
 
 export const InputWrap = styled.div`
