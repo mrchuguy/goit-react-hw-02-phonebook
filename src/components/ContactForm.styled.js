@@ -14,6 +14,10 @@ export const InputWrap = styled.div`
   height: 50px;
   margin-bottom: 30px;
 
+  & span {
+    pointer-events: none;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }

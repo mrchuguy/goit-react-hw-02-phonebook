@@ -17,22 +17,22 @@ export class App extends Component {
     );
   };
 
-  doOnSubmit = event => {
-    const { name, number } = event.target.elements;
+  doOnSubmit = (name, number) => {
     const newContact = {
       id: nanoid(),
-      name: name.value,
-      number: number.value,
+      name: name,
+      number: number,
     };
 
-    if (this.checkNameInContacts(name.value)) {
-      alert(`${name.value} is already in contacts.`);
-    } else {
-      this.setState(prevState => ({
-        contacts: [...prevState.contacts, newContact],
-      }));
-      event.target.reset();
+    if (this.checkNameInContacts(name)) {
+      alert(`${name} is already in contacts.`);
+      return false;
     }
+
+    this.setState(prevState => ({
+      contacts: [...prevState.contacts, newContact],
+    }));
+    return true;
   };
 
   changeFilter = value => {
