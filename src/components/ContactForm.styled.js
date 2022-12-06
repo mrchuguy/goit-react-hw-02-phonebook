@@ -50,7 +50,7 @@ export const Input = styled.input`
 
   &:focus ~ span,
   &:valid ~ span,
-  &:not(:empty) {
+  &:not(:empty) ~ span {
     transform: translateX(-13px) translateY(-35px);
     font-size: 1em;
   }
