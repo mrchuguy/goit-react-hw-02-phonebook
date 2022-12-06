@@ -3,10 +3,9 @@ import { Form, Input, InputWrap, Label } from './ContactForm.styled';
 export const ContactForm = ({ onSubmit }) => {
   const handleSubmit = event => {
     event.preventDefault();
-    const { name, number } = event.target.elements;
-    onSubmit(name.value, number.value);
-    event.target.reset();
+    onSubmit(event);
   };
+
   return (
     <Form onSubmit={handleSubmit}>
       <InputWrap>
